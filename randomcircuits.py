@@ -150,15 +150,11 @@ def FindOptimalGauge(circ, noise):
 	# For each gauge, construct the quantum circuit and compute its fidelity.
 	nparams = 2 * np.count_nonzero(circ >= 12) # + np.count_nonzero(np.logical_and(circ < 12, circ > -1))
 	ndegfreedom = np.power(2, nparams, dtype = np.int)
-	gauges = np.zeros((ndegfreedom, nparams + 1), dtype = np.float)
-	for i in range(ndegfreedom):
-		gauges[i, :-1] = np.array(list(map(np.int8, np.binary_repr(i, width = nparams))), dtype = np.float)
-		gauges[i, -1] = SimulateRandomClifford(circ, gauges[i, :-1].astype(np.int8), noise)
-		#stdout.write("\r...%d%% done" % ((i+1)/float(ndegfreedom) * 100))
-	#print("")
-	optimal = gauges[np.argmax(gauges[:, -1]), :]
-	print("Fidelities\n%s" % (np.array_str(gauges[:, -1])))
+	fidelities = np.array(list(map(lambda gg: SimulateRandomClifford(circ, np.array(list(map(np.int8, np.binary_repr(gg, width = nparams))), dtype = np.int8), noise), np.arange(ndegfreedom, dtype = np.int))), dtype = np.float)
+	optimal = np.concatenate((np.array(list(map(np.int8, np.binary_repr(np.argmax(fidelities), width = nparams))), dtype = np.int8), [np.max(fidelities)]))
+	print("Fidelities\n%s" % (np.array_str(fidelities)))
 	return optimal
+
 
 
 def SearchCNOTPairs(noise):
