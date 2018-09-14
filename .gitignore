@@ -2,3 +2,5 @@
 *.aux
 *.log
 *.synctex.gz
+# the quantumsim/ folder needs to be inside this folder for things to work correctly. But it won't be updated to GitHib
+quantumsim/

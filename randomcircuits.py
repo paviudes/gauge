@@ -177,8 +177,8 @@ def SearchCNOTPairs(noise):
 		print("Circuit element: %s"% (np.array_str(circs[i, :])))
 		optimal = FindOptimalGauge(circs[i, :], noise)
 		print("Optimal gauge\n%s" % (np.array_str(optimal)))
-		print("Total time: %d seconds."% (time.time() - start))
-	return circs
+		print("Time elapsed: %d seconds."% (time.time() - start))
+	return None
 
 def SearchRandomCircuits(size, ncnots, noise, ncircuits):
 	# Find optimal gauge values in a set of random circuits with a given number of CNOTs
@@ -200,8 +200,8 @@ if __name__ == '__main__':
 	noise = 0.05
 	ncircuits = 1000
 	# SearchRandomCircuits(size, ncnots, noise, ncircuits)
-	## Construct basic CNOT elements
-	circs = SearchCNOTPairs(noise)
+	## Construct basic CNOT elements and brute-force search for the optimal gauge in them
+	SearchCNOTPairs(noise)
 
 
 # for trial_number in range(trial_length):
