@@ -1,0 +1,48 @@
+\documentclass[11pt]{article}
+\usepackage[top=2.5cm,bottom=2.5cm,right=2.5cm,left=2.5cm]{geometry}
+\usepackage{graphicx,float}
+\def\C{\rm CNOT}
+\title{CNOT scenarios}
+\date{}
+\begin{document}
+\maketitle
+
+The CNOT gates are indexed as follows.
+%\begin{table}[H]
+%\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Index & Gate \\
+\hline
+12 & $\C_{12}$ \\
+13 & $\C_{13}$ \\
+14 & $\C_{21}$ \\
+15 & $\C_{23}$ \\
+16 & $\C_{31}$ \\
+17 & $\C_{32}$ \\
+\hline
+\end{tabular}
+%\end{center}
+%\end{table}
+
+%\vspace{1cm}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.5]{case1.jpg}	\includegraphics[scale=0.5]{case2.jpg}
+
+\includegraphics[scale=0.5]{case3.jpg}	\includegraphics[scale=0.5]{case4.jpg}
+
+\vspace{0.5cm}
+
+\includegraphics[scale=0.5]{case5.jpg}	\includegraphics[scale=0.5]{case6.jpg}
+
+\vspace{0.5cm}
+
+\includegraphics[scale=0.5]{case7.jpg}	\includegraphics[scale=0.5]{case8.jpg}
+\caption{For each circuit, the list $C = [\ldots]$ denotes the indices of the gates.}
+\label{fit:cnots}
+\end{center}
+\end{figure}
+
+\end{document}  

@@ -169,8 +169,10 @@ def SearchCNOTPairs(noise):
 	# 4. 12, 17
 	# 5. 12, 12
 	# 6. 12, 14
+	# 7. 14, 12
+	# 8. 14, 14
 	start = time.time()
-	circs = np.array([[15, 12], [15, 14], [12, 13], [12, 17], [12, 12]], dtype = np.int8)
+	circs = np.array([[15, 12], [15, 14], [12, 13], [12, 17], [12, 12], [12, 14], [14, 12], [14, 14]], dtype = np.int8)
 	for i in range(circs.shape[0]):
 		print("Circuit element: %s"% (np.array_str(circs[i, :])))
 		optimal = FindOptimalGauge(circs[i, :], noise)
