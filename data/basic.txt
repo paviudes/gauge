@@ -13,7 +13,7 @@ Fidelities
  0.96903952 0.98108054 0.97506915 0.97499294]
 Optimal gauge
 [0.         0.         1.         0.         0.98108054]
-Time elapsed: 15 seconds.
+Time elapsed: 14 seconds.
 Circuit element: [12 13]
 Fidelities
 [0.97499294 0.97506915 0.98108054 0.96903952 0.97506915 0.97499294
@@ -29,7 +29,7 @@ Fidelities
  0.97205682 0.97807716 0.97807716 0.97205682]
 Optimal gauge
 [0.         0.         0.         1.         0.97807716]
-Time elapsed: 30 seconds.
+Time elapsed: 29 seconds.
 Circuit element: [12 12]
 Fidelities
 [0.96234274 0.98788014 1.         0.95053235 0.98788014 0.96234274
@@ -53,7 +53,7 @@ Fidelities
  0.97502629 0.97477832 0.97501598 0.97526635]
 Optimal gauge
 [0.         0.         1.         0.         0.97527432]
-Time elapsed: 52 seconds.
+Time elapsed: 51 seconds.
 Circuit element: [14 14]
 Fidelities
 [0.96234274 0.98788014 1.         0.95053235 0.98788014 0.96234274
